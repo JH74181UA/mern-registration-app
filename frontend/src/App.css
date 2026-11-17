@@ -1,0 +1,102 @@
+/* Custom styling augmenting Bootstrap 5 */
+:root {
+  --primary-gradient: linear-gradient(135deg, #4f46e5 0%, #3b82f6 50%, #06b6d4 100%);
+  --bg-gradient: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: #1e293b;
+}
+
+.app-container {
+  background: transparent;
+}
+
+/* Card Styling */
+.registration-card {
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.12), 0 0 1px 1px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bg-gradient-primary {
+  background: var(--primary-gradient) !important;
+}
+
+.form-section-title {
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid #e0e7ff;
+}
+
+/* Input Fields Focus & Transition */
+.form-control,
+.form-select {
+  padding: 0.65rem 0.95rem;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  border-color: #cbd5e1;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 0.25rem rgba(99, 102, 241, 0.15);
+}
+
+.input-group-text {
+  border-radius: 0.5rem;
+  border-color: #cbd5e1;
+}
+
+/* Validation styles */
+.form-control.is-invalid,
+.form-select.is-invalid {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 0.2rem rgba(239, 68, 68, 0.15);
+}
+
+.form-control.is-valid,
+.form-select.is-valid {
+  border-color: #10b981;
+}
+
+.invalid-feedback {
+  font-size: 0.825rem;
+  font-weight: 500;
+  margin-top: 0.35rem;
+}
+
+/* Password strength meter */
+.password-strength-container {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+/* Button enhancements */
+.btn-primary {
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: linear-gradient(135deg, #4338ca 0%, #2563eb 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.brand-icon {
+  width: 32px;
+  height: 32px;
+}
